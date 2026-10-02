@@ -1,0 +1,15 @@
+{
+  "name": "jevtrade",
+  "version": "1.0.0",
+  "description": "JevTrade: a decision-support tool for NSE/BSE equities, backed by the TypeSafe Jev API with a local rules-engine fallback.",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

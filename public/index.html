@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JevTrade · Indian equities</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+  <symbol id="i-trend-down" viewBox="0 0 24 24"><path d="M3 7l6 6 4-4 8 8"/><path d="M15 17h6v-6"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></symbol>
+  <symbol id="i-rs" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><path d="M12 2l2.4 1.8 3-.2.9 2.9 2.5 1.7-1 2.8 1 2.8-2.5 1.7-.9 2.9-3-.2L12 22l-2.4-1.8-3 .2-.9-2.9-2.5-1.7 1-2.8-1-2.8 2.5-1.7.9-2.9 3 .2z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-signal" viewBox="0 0 24 24"><path d="M5 20v-4M10 20v-8M15 20v-12M20 20V4"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><rect x="4" y="12" width="4" height="8" rx="1"/><rect x="10" y="7" width="4" height="13" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/></symbol>
+  <symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+</svg>
+
+<div class="shell">
+  <header class="nav">
+    <div class="logo"><b>Jev<span>Trade</span></b><small>NSE · BSE</small></div>
+    <nav class="links" aria-label="Main">
+      <button type="button" data-page="analyze" aria-current="page">Analyze</button>
+      <button type="button" data-page="history">History</button>
+      <button type="button" data-page="how">How it works</button>
+      <button type="button" data-page="why">Why Jev?</button>
+    </nav>
+    <div class="nav-right">
+      <span class="mkt" title="Regular NSE session, Mon–Fri 9:15–15:30 IST. Exchange holidays not shown."><i id="mkt-dot"></i><span id="mkt-status">NSE</span></span>
+      <button type="button" class="icon-btn" id="theme" aria-label="Switch to dark theme"><svg class="i"><use href="#i-sun"/></svg></button>
+    </div>
+  </header>
+
+  <!-- ================= ANALYZE ================= -->
+  <main class="page analyze" id="page-analyze">
+    <section class="card panel" aria-label="Input data">
+      <form class="scroll" id="f" novalidate onsubmit="return false">
+        <div class="step">
+          <div class="step-head">
+            <span class="num">1</span>
+            <div class="grow"><h2>Stock &amp; timeframe</h2><p>Enter the stock and analysis timeframe</p></div>
+            <button type="button" class="pill-btn" id="reset"><svg class="i"><use href="#i-reset"/></svg>Reset</button>
+          </div>
+          <div class="grid g-sym">
+            <label class="f"><span class="lb">Stock symbol <span class="req" aria-hidden="true">*</span></span>
+              <span class="sym"><svg class="i"><use href="#i-search"/></svg><input class="ctl" id="ticker" list="tickers" autocomplete="off" spellcheck="false" maxlength="20" placeholder="e.g. RELIANCE"><button type="button" class="exch" id="exch" aria-label="Exchange NSE, click to switch">NSE</button></span>
+            </label>
+            <div class="f"><span class="lb" id="tf-lb">Timeframe <span class="tip" tabindex="0" data-tip="Longer timeframes give fundamentals more weight: 1D 5%, 1W 15%, 1M 20%, 3M 35%.">i</span></span>
+              <div class="tf" role="group" aria-labelledby="tf-lb">
+                <button type="button" data-tf="1D">1D</button><button type="button" data-tf="1W" aria-pressed="true">1W</button><button type="button" data-tf="1M">1M</button><button type="button" data-tf="3M">3M</button>
+              </div>
+            </div>
+          </div>
+          <div class="grid g3" style="margin-top:14px">
+            <label class="f"><span class="lb">Data as of <span class="tip" tabindex="0" data-tip="The date of the readings you enter. Jev warns when data is stale for your timeframe.">i</span></span><input class="ctl" id="ddate" type="date"></label>
+            <div class="f span2"><span class="lb">Chart to use</span><div class="hintbox" id="tf-hint"></div></div>
+          </div>
+          <datalist id="tickers"></datalist>
+        </div>
+
+        <div class="step">
+          <div class="step-head"><span class="num">2</span><div class="grow"><h2>Technical indicators</h2><p>From your chart in Kite, Upstox or TradingView. Blank fields count as neutral.</p></div></div>
+          <div class="grid g3">
+            <label class="f"><span class="lb">Current price (₹) <span class="req" aria-hidden="true">*</span></span><input class="ctl" id="price" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+            <label class="f"><span class="lb">RSI <em>14</em></span><input class="ctl" id="rsi" type="number" min="0" max="100" step="0.1" inputmode="decimal" placeholder="0–100"></label>
+            <label class="f"><span class="lb">MACD</span><select class="ctl" id="macd"></select></label>
+            <label class="f"><span class="lb">EMA 20</span><input class="ctl" id="e20" type="number" step="0.01" inputmode="decimal" placeholder="₹"></label>
+            <label class="f"><span class="lb">EMA 50</span><input class="ctl" id="e50" type="number" step="0.01" inputmode="decimal" placeholder="₹"></label>
+            <label class="f"><span class="lb">EMA 200</span><input class="ctl" id="e200" type="number" step="0.01" inputmode="decimal" placeholder="₹"></label>
+            <label class="f"><span class="lb">Volume vs avg <em>%</em></span><input class="ctl" id="vol" type="text" inputmode="decimal" placeholder="+32%"></label>
+            <label class="f"><span class="lb">ATR (volatility) <em>₹</em></span><input class="ctl" id="atr" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+            <label class="f"><span class="lb">Momentum</span><select class="ctl" id="mom"></select></label>
+            <label class="f"><span class="lb">Support <em>₹</em></span><input class="ctl" id="sup" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+            <label class="f"><span class="lb">Resistance <em>₹</em></span><input class="ctl" id="res" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+            <label class="f"><span class="lb">Avg daily value <em>₹ cr</em> <span class="tip" tabindex="0" data-tip="Average daily traded value over 20 sessions, in ₹ crore. Shown on the NSE quote page; or 20-day average volume × price.">i</span></span><input class="ctl" id="adv" type="number" step="0.1" inputmode="decimal" placeholder="e.g. 45"></label>
+            <label class="f"><span class="lb">Stock 3M return <em>%</em></span><input class="ctl" id="sret" type="text" inputmode="decimal" placeholder="+8.5"></label>
+            <label class="f"><span class="lb">Nifty 3M return <em>%</em></span><input class="ctl" id="nret" type="text" inputmode="decimal" placeholder="+3.0"></label>
+          </div>
+          <div class="derived" id="d-tech"></div>
+        </div>
+
+        <div class="step">
+          <div class="step-head"><span class="num">3</span><div class="grow"><h2>Market context</h2><p>India VIX and FII/DII cash data are published daily on nseindia.com (optional)</p></div></div>
+          <div class="grid g3">
+            <label class="f"><span class="lb">Nifty 50 trend</span><select class="ctl" id="mkt"></select></label>
+            <label class="f"><span class="lb">Sector trend</span><select class="ctl" id="sec"></select></label>
+            <label class="f"><span class="lb">India VIX</span><input class="ctl" id="vix" type="number" step="0.1" inputmode="decimal" placeholder="e.g. 13.5"></label>
+            <label class="f"><span class="lb">Market sentiment</span><select class="ctl" id="news"></select></label>
+            <label class="f"><span class="lb">FII cash flow <em>5 days</em></span><select class="ctl" id="fii"></select></label>
+          </div>
+        </div>
+
+        <div class="step" id="step-fund">
+          <div class="step-head"><span class="num">4</span><div class="grow"><h2>Fundamentals</h2><p id="fund-hint">From Screener.in or the latest quarterly results (optional)</p></div>
+            <div class="tf kind" role="group" aria-label="Company type"><button type="button" data-kind="nonfin" aria-pressed="true">Company</button><button type="button" data-kind="fin" aria-pressed="false">Bank / NBFC</button></div></div>
+          <button type="button" class="pill-btn" id="fund-toggle" hidden>Add fundamentals anyway</button>
+          <div id="fund-fields">
+          <div class="grid g4">
+            <label class="f" data-only="fin"><span class="lb">P/B</span><input class="ctl" id="pb" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+            <label class="f" data-only="fin"><span class="lb">Sector P/B</span><input class="ctl" id="spb" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+            <label class="f"><span class="lb">P/E</span><input class="ctl" id="pe" type="number" step="0.1" inputmode="decimal" placeholder="0.0"></label>
+            <label class="f"><span class="lb">Sector P/E</span><input class="ctl" id="spe" type="number" step="0.1" inputmode="decimal" placeholder="0.0"></label>
+            <label class="f"><span class="lb">PEG</span><input class="ctl" id="peg" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+            <label class="f" data-only="nonfin"><span class="lb">FCF yield <em>%</em></span><input class="ctl" id="fcf" type="number" step="0.1" inputmode="decimal" placeholder="0.0"></label>
+            <label class="f" data-only="nonfin"><span class="lb">Debt / equity</span><input class="ctl" id="de" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+            <label class="f" data-only="nonfin"><span class="lb">Interest cover <em>×</em></span><input class="ctl" id="ic" type="number" step="0.1" inputmode="decimal" placeholder="0.0"></label>
+            <label class="f" data-only="nonfin"><span class="lb">Promoter pledge <em>%</em></span><input class="ctl" id="pledge" type="number" min="0" max="100" step="0.1" inputmode="decimal" placeholder="0.0"></label>
+            <label class="f" data-only="fin"><span class="lb">Gross NPA <em>%</em></span><input class="ctl" id="gnpa" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+            <label class="f" data-only="fin"><span class="lb">CAR <em>%</em></span><input class="ctl" id="car" type="number" step="0.1" inputmode="decimal" placeholder="0.0"></label>
+            <label class="f" data-only="fin"><span class="lb">ROA <em>%</em></span><input class="ctl" id="roa" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+          </div>
+          <div class="derived" id="d-fund"></div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-head"><span class="num">5</span><div class="grow"><h2>Risk &amp; events</h2><p>Results dates and ASM/GSM lists are on nseindia.com (optional)</p></div></div>
+          <div class="grid g4">
+            <label class="f"><span class="lb">Event risk</span><select class="ctl" id="evt"></select></label>
+            <label class="f"><span class="lb">Next catalyst</span><select class="ctl" id="cat"></select></label>
+            <label class="f"><span class="lb">Results date</span><input class="ctl empty" id="edate" type="date"></label>
+            <label class="f"><span class="lb">Surveillance</span><select class="ctl" id="surv"></select></label>
+            <label class="f span3"><span class="lb">Notes <em>for Ask Jev</em></span><input class="ctl" id="notes" type="text" maxlength="200" placeholder="e.g. strong Q2 guidance, block deal on Monday"></label>
+          </div>
+          <div class="derived" id="d-evt"></div>
+        </div>
+
+        <div class="step">
+          <div class="step-head"><span class="num">6</span><div class="grow"><h2>Position sizing</h2><p>Doesn't affect the call — only sizes the trade in your plan</p></div></div>
+          <button type="button" class="pill-btn" id="size-toggle" aria-expanded="false">Size my position</button>
+          <div class="grid g3" id="size-fields" hidden style="margin-top:14px">
+            <label class="f"><span class="lb">Trading capital <em>₹</em></span><input class="ctl" id="cap" type="number" step="1000" inputmode="numeric" placeholder="e.g. 500000"></label>
+            <label class="f"><span class="lb">Risk per trade <em>%</em></span><input class="ctl" id="riskPct" type="number" step="0.1" min="0.1" max="5" inputmode="decimal" placeholder="1.0"></label>
+          </div>
+        </div>
+      </form>
+      <div class="foot">
+        <button class="cta" id="go" type="button"><svg class="i"><use href="#i-spark"/></svg><span>Analyze with Jev</span><svg class="i"><use href="#i-arrow"/></svg></button>
+        <p class="foot-msg" id="msg">Press <b>Ctrl</b> + <b>Enter</b> from any field. Not SEBI-registered investment advice.</p>
+      </div>
+    </section>
+
+    <section class="card panel result" id="out" aria-label="Jev AI decision">
+      <div class="r-head">
+        <div><h1>Jev AI Decision</h1><p id="r-sub">Based on your input data</p></div>
+        <div class="chips">
+          <span class="chipx time"><svg class="i"><use href="#i-clock"/></svg><span id="r-time">Analysis time: —</span></span>
+          <span class="chipx stale">Inputs changed. Analyze again.</span>
+          <span class="chipx engine live" id="engine"><svg class="i"><use href="#i-cog"/></svg><span>Jev API</span></span>
+        </div>
+      </div>
+      <div class="rtabs" role="tablist" aria-label="Analysis views">
+        <button type="button" role="tab" data-view="decision" aria-selected="true">Decision</button>
+        <button type="button" role="tab" data-view="questions" aria-selected="false">20 questions</button>
+        <button type="button" role="tab" data-view="ask" aria-selected="false">Ask Jev</button>
+      </div>
+
+      <div class="scroll rview" id="v-decision" role="tabpanel" aria-live="polite">
+        <div class="hero">
+          <div class="ring">
+            <svg viewBox="0 0 200 200" aria-hidden="true"><circle class="trk" cx="100" cy="100" r="86" fill="none" stroke-width="11"/><circle class="bar" id="bar" cx="100" cy="100" r="86" fill="none" stroke-width="11" stroke-dasharray="540.35" stroke-dashoffset="540.35"/></svg>
+            <div class="ring-c"><span class="verdict" id="o-verdict">—</span><div class="prob"><span id="o-prob">0</span><small>%</small></div><div class="prob-l">Model probability <span class="tip" tabindex="0" data-tip="A rule-based estimate from weighted inputs, not a backtested win rate. Use it to compare setups, not as odds.">i</span></div></div>
+          </div>
+          <div>
+            <h3 id="o-head">—</h3>
+            <p class="desc" id="o-desc"></p>
+            <div class="mini">
+              <div><span class="k">Confidence</span><span class="v" id="o-conf">—</span><span class="segbar" id="o-confbar"></span></div>
+              <div><span class="k">Signal strength</span><span class="v" id="o-sigword">—</span><span class="segbar" id="o-sigbar"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><span class="ic" id="ic-trend"><svg class="i"><use href="#i-trend"/></svg></span><div><div class="k">Market trend</div><div class="v" id="o-trend">—</div></div></div>
+          <div class="stat"><span class="ic" id="ic-mom"><svg class="i"><use href="#i-pulse"/></svg></span><div><div class="k">Momentum</div><div class="v" id="o-mom">—</div></div></div>
+          <div class="stat"><span class="ic" id="ic-rs"><svg class="i"><use href="#i-rs"/></svg></span><div><div class="k">Vs Nifty (3M)</div><div class="v" id="o-rs">—</div></div></div>
+          <div class="stat"><span class="ic" id="ic-risk"><svg class="i"><use href="#i-shield"/></svg></span><div><div class="k">Risk level</div><div class="v" id="o-risk">—</div></div></div>
+        </div>
+
+        <div class="duo">
+          <div class="box"><h3>Key factors</h3><ul class="factors" id="o-factors"></ul></div>
+          <div class="box"><h3>Trade plan</h3><div id="o-plan"></div></div>
+        </div>
+
+        <div class="box audit">
+          <div class="dims-head"><h3 style="margin:0">Input audit</h3><span class="lab" id="o-qlab">—</span></div>
+          <div class="qmeter"><b id="o-qbar"></b></div>
+          <p class="audit-sub" id="o-qsub"></p>
+          <ul class="checks" id="o-checks"></ul>
+        </div>
+
+        <div class="box dims">
+          <div class="dims-head"><h3 style="margin:0">Decision model</h3><button type="button" class="link" data-goview="questions">See all 20 answers</button></div>
+          <div id="o-dims"></div>
+        </div>
+      </div>
+
+      <div class="scroll rview" id="v-questions" role="tabpanel" hidden>
+        <div class="prims" id="prims-a"></div>
+        <div id="o-questions"></div>
+      </div>
+
+      <div class="ask" id="v-ask" role="tabpanel" hidden>
+        <div class="thread" id="thread">
+          <div class="empty" id="ask-empty">
+            <h3 id="ask-title">Ask about this analysis</h3>
+            <p id="ask-lede"></p>
+            <div class="sugg" id="sugg"></div>
+          </div>
+        </div>
+        <pre class="state-doc" id="state-doc" hidden></pre>
+        <div class="composer">
+          <div class="row"><textarea id="q" rows="1" placeholder="Ask a follow-up, e.g. what would flip this to Hold?" aria-label="Question for Jev"></textarea><button class="send" id="send" type="button" disabled>Ask</button></div>
+          <div class="note"><span class="tf am" id="ask-modes" role="group" aria-label="Ask mode"><button type="button" data-am="check" id="am-check" aria-pressed="false">Yes/No (Jev)</button><button type="button" data-am="explain" id="am-explain" aria-pressed="true">Explain (Claude)</button></span><span id="ask-note">Grounded in the current analysis.</span><button class="link" type="button" id="toggle-state">View state document</button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= HISTORY ================= -->
+  <main class="page content" id="page-history" hidden>
+    <div class="inner">
+      <div class="hist-head">
+        <div><h1>History</h1><p class="lede" style="margin-bottom:0">Your last analyzed companies, kept in this browser only.</p></div>
+        <button type="button" class="pill-btn" id="hist-clear">Clear history</button>
+      </div>
+      <div class="hist-empty" id="hist-empty">
+        <p>No analyses yet. Run "Analyze with Jev" and it'll show up here.</p>
+      </div>
+      <div class="hist-list" id="hist-list"></div>
+    </div>
+  </main>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <main class="page content" id="page-how" hidden>
+    <div class="inner">
+      <h1>How it works</h1>
+      <p class="lede">Jev is a typed decision model for NSE and BSE stocks. It turns the readings you enter into a fixed set of answers, so the same inputs always give the same call.</p>
+      <div class="hiw">
+        <div class="card"><span class="num">1</span><h3>You enter what you know</h3><p>Only the symbol and price are required. Every blank field is treated as neutral, and Jev lowers its confidence when data is thin.</p></div>
+        <div class="card"><span class="num">2</span><h3>Jev answers 20 typed questions</h3><p>Valuation, balance sheet, momentum and relative strength, macro and risk, and upside and catalysts. Each answer is a Choice or a Score, with a Noul that says why.</p></div>
+        <div class="card"><span class="num">3</span><h3>One call, with its odds</h3><p>All 20 questions go to the Jev model in one request, evaluated in parallel. Jev's probabilities set the call and confidence; code adds the trade plan, audit and guardrails.</p></div>
+        <div class="card"><span class="num">4</span><h3>Ask follow-ups</h3><p>Ask Jev any yes/no question and it returns a Noul, the probability of yes, judged against the same state. On claude.ai, Claude can also explain the analysis in plain language.</p></div>
+      </div>
+      <div class="prims lg" id="prims-b"></div>
+      <h2 class="h2">Where the data comes from</h2>
+      <p class="lede" style="margin-bottom:16px">Jev does not fetch live market data yet. You enter every value, so it helps to pull them from the same few places each time.</p>
+      <div class="card src">
+        <div class="src-row"><div><b>Your chart</b><span>Kite, Upstox or TradingView, daily candles</span></div><p>Price, EMA 20/50/200, RSI(14), MACD, ATR(14), volume vs 20-day average, support and resistance, 3-month returns for the stock and the Nifty.</p></div>
+        <div class="src-row"><div><b>nseindia.com</b><span>Updated daily</span></div><p>India VIX, FII/DII provisional cash data, the ASM and GSM surveillance lists, results dates from corporate announcements, and average traded value on the quote page.</p></div>
+        <div class="src-row"><div><b>Screener.in</b><span>Or the company's filings</span></div><p>P/E and sector P/E, PEG, free cash flow, debt/equity, interest cover and promoter pledge. For banks and NBFCs: P/B, gross NPA, capital adequacy and ROA.</p></div>
+        <div class="src-row"><div><b>Your judgement</b><span>Define it the same way each time</span></div><p>Nifty and sector trend (for example, above a rising 50 DMA is bullish), market sentiment, next catalyst, and your notes.</p></div>
+      </div>
+      <h2 class="h2">Limits to know</h2>
+      <div class="card src">
+        <div class="src-row"><div><b>Not backtested</b></div><p>The weights are expert rules, not fitted to historical results. Treat the probability as a way to compare setups, not as true odds.</p></div>
+        <div class="src-row"><div><b>No order flow</b></div><p>Jev doesn't see options open interest, delivery percentage, block deals or intraday tape. Add anything important as a note for Ask Jev.</p></div>
+        <div class="src-row"><div><b>Short selling</b></div><p>In the Indian cash market, delivery-based shorting isn't allowed. A Sell call means exit or avoid; shorting needs F&amp;O or intraday.</p></div>
+      </div>
+      <p class="disclaimer">Jev produces probability estimates from the inputs you provide. It is not SEBI-registered investment advice.</p>
+    </div>
+  </main>
+
+  <!-- ================= WHY JEV ================= -->
+  <main class="page content" id="page-why" hidden>
+    <div class="inner">
+      <h1>Why Jev?</h1>
+      <p class="lede">A fast, reliable and low-cost decision model for Indian equities.</p>
+      <div class="why-grid">
+        <div class="card"><span class="ic"><svg class="i"><use href="#i-zap"/></svg></span><h3>Fast</h3><p>All 20 questions go to Jev in one request and are answered in parallel.</p></div>
+        <div class="card"><span class="ic"><svg class="i"><use href="#i-target"/></svg></span><h3>Typed decisions</h3><p>Always Buy, Hold or Sell, with Scores from 1 to 5. Never vague.</p></div>
+        <div class="card"><span class="ic"><svg class="i"><use href="#i-shield"/></svg></span><h3>Consistent</h3><p>Same inputs, same answer, every time. No drift between runs.</p></div>
+        <div class="card"><span class="ic"><svg class="i"><use href="#i-chart"/></svg></span><h3>Probabilistic</h3><p>Every call carries a probability and a confidence level.</p></div>
+        <div class="card"><span class="ic"><svg class="i"><use href="#i-coins"/></svg></span><h3>Low cost</h3><p>One API call per analysis. No terminal subscription.</p></div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="js/model.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
